@@ -1,0 +1,27 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'AIToolsEdge — Honest reviews, real tradeoffs',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Welcome to AIToolsEdge"
+  >
+    <Fragment slot="title">
+      AIToolsEdge
+    </Fragment>
+    <Fragment slot="subtitle">
+      Hands-on AI tool reviews. Real use cases, real costs, no hype.
+    </Fragment>
+  </Hero>
+
+  <BlogLatestPosts
+    title="Latest Guides"
+    information={`Hands-on, no-fluff reviews and how-to guides.`}
+  />
+</Layout>
